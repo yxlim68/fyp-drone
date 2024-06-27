@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapshots</title>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        {% for snapshot in snapshots %}
+            <li>
+                <a href="{{ url_for('download_snapshot', filename=snapshot) }}" target="_blank">
+                    <img src="{{ url_for('download_snapshot', filename=snapshot) }}" alt="{{ snapshot }}" style="width:200px;">
+                </a>
+                <br>
+                <a href="{{ url_for('download_snapshot', filename=snapshot) }}">Download {{ snapshot }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

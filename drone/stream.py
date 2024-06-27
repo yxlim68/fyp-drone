@@ -1,6 +1,6 @@
 import cv2
 from djitellopy import Tello
-from flask import Flask, Response
+from flasktest import Flask, Response
 from ultralytics import YOLO
 
 from drone.config import TELLO_HOST
